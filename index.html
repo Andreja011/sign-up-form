@@ -11,7 +11,116 @@
 </head>
 
 <body>
-  <h1 class="primary-header">Sign Up Form</h1>
+  <main>
+    <section class="whole-section">
+      <div class="container">
+
+        <!-- LEFT SIDE -->
+        <div class="left-side">
+          <figure class="left-side-figure">
+            <img src="picture1.jpg" alt="City view" class="left-side-img">
+            <figcaption class="left-side-figure-figcaption">Photo by <a
+                href="https://unsplash.com/@jbtzxclsv" target="_blank">Jodie
+                Walton</a> on <a href="https://unsplash.com/photos/t0W9cVg4k9o"
+                target="_blank">Unsplash</a>
+            </figcaption>
+            <div class="left-side-img-text">
+              Sign Up for crazy New Year's eve!
+            </div>
+          </figure>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="right-side">
+          <p class="right-side-first-paragraph">This is not a real online
+            service! You know you need something like
+            this in your life to help you realize your deepest dreams.</p>
+          <p class="right-side-second-paragraph">Sign up now to get started.</p>
+          <p class="right-side-third-paragraph">You know you want to.</p>
+
+          <!-- SIGN UP FORM -->
+          <form action="#" method="post" class="right-side-form">
+            <p class="right-side-form-paragraph">Lets do this!</p>
+
+            <!-- PERSONAL INFO -->
+            <fieldset class="right-side-form-personal-info">
+              <legend class="right-side-form-personal-info-legend">Personal
+                info
+              </legend>
+              <!-- FIRST NAME -->
+              <div class="first-and-last-name">
+                <div class="first-and-last-name-first-name">
+                  <label for="right-side-form-first-name">FIRST NAME</label>
+                  <input type="text" id="right-side-form-first-name"
+                    placeholder="Pera" name="first-name" required>
+                </div>
+
+                <!-- LAST NAME -->
+                <div class="first-and-last-name-last-name">
+                  <label for="right-side-form-last-name">LAST NAME</label>
+                  <input type="text" id="right-side-form-last-name"
+                    placeholder="Peric" name="last-name" required>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- CONTACT INFO -->
+            <fieldset class="right-side-form-contact">
+              <legend class="right-side-form-contanct-details">Contact info
+              </legend>
+              <!-- EMAIL -->
+              <div class="right-side-form-contact-details-and-phone-number">
+                <div class="right-side-form-contanct-details-email">
+                  <label for="right-side-form-email">EMAIL</label>
+                  <input type="email" id="right-side-form-email"
+                    placeholder="pera.peric@gmail.com" name="email" required>
+                </div>
+                <!-- PHONE NUMBER -->
+                <div class="right-side-form-contanct-details-phone-number">
+                  <label for="right-side-form-phone-number">PHONE NUMBER</label>
+                  <input type="text" id="right-side-form-phone-number"
+                    placeholder="+381631234567" name="phone-number">
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- PASSWORD DETAILS -->
+            <!-- PASSWORD -->
+            <fieldset class="right-side-form-password-details">
+              <legend class="right-side-form-password-details">Password
+                details
+              </legend>
+              <div class="right-side-form-password-and-confirm-password">
+                <div
+                  class="right-side-form-password-and-confirm-password-password">
+                  <label for="right-side-form-password">PASSWORD</label>
+                  <input type="password" id="right-side-form-password"
+                    name="password" required minlength="4" maxlength="16"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,16}"
+                    placeholder="Your password">
+                </div>
+                <!-- CONFIRM PASSWORD -->
+                <div
+                  class="right-side-form-password-and-confirm-password-confirm-password">
+                  <label for="right-side-form-confirm-password">CONFIRM
+                    PASSWORD</label>
+                  <input type="password" id="right-side-form-confirm-password"
+                    name="confirm-password" required minlength="4"
+                    maxlength="16" placeholder="Repeat password">
+                </div>
+              </div>
+            </fieldset>
+          </form>
+          <section class="right-side-button-section">
+            <button type="submit" class="right-side-button">Create
+              Account</button>
+            <p class="right-side-button-paragraph">Already have an account? <a
+                href="#">Log in</a></p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -9,10 +11,11 @@ html {
 }
 
 body {
-  font-family: Rubik, sans-serif;
+  font-family: "Outfit", sans-serif;
   line-height: 1;
-  font-weight: 400;
+  font-weight: var(--font-regular);
   color: #555;
+  background-color: var(--picture-color);
 }
 
 ol,
@@ -26,4 +29,292 @@ a {
 
 button {
   background: none;
+}
+
+/* VARIABLES */
+:root {
+  --dark-blue: #195df0;
+  --gray: #aba9bb;
+  --red: #de0034;
+  --green: #00bd7f;
+  --yellow: #ffbe00;
+  --picture-color: #041e24;
+  --gradient-color-first: #00484a;
+  --font-small: 1.5rem;
+  --font-medium: 2.5rem;
+  --font-big: 3.5rem;
+  --font-regular: 400;
+  --font-bold: 700;
+  --space-small: 2rem;
+  --space-medium: 3rem;
+  --space-big: 5rem;
+  --radius: 15px;
+}
+
+.container {
+  height: 80rem;
+  width: 130rem;
+  margin: var(--space-big) auto 0 auto;
+  display: flex;
+  box-shadow: 0px 0px 10px 5px var(--yellow);
+  /* border: 1px solid black; */
+  border-radius: var(--radius);
+}
+
+/* LEFT SIDE */
+
+.left-side {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.left-side-figure {
+  position: relative;
+  height: 100%;
+}
+
+.left-side-img {
+  height: 100%;
+  box-shadow: 0px 0px 10px 5px var(--yellow);
+  border-radius: var(--radius);
+  display: block;
+}
+
+.left-side-img-text {
+  font-size: var(--font-big);
+  position: absolute;
+  top: 8rem;
+  padding: var(--space-small);
+  background-color: var(--picture-color);
+  color: var(--yellow);
+  opacity: 0.5;
+  text-align: center;
+  text-shadow: var(--yellow) 1px 0 10px;
+}
+
+.left-side-figure-figcaption {
+  position: absolute;
+  bottom: var(--space-small);
+  right: var(--space-small);
+  color: var(--gray);
+  font-size: var(--font-small);
+  font-weight: var(--font-regular);
+}
+
+.left-side-figure-figcaption > a:link {
+  color: white;
+  font-weight: var(--font-bold);
+  display: inline-block;
+}
+
+.left-side-figure-figcaption > a:visited {
+  color: var(--dark-blue);
+}
+
+.left-side-figure-figcaption > a:hover {
+  transform: scale(1.05);
+  color: var(--yellow);
+}
+
+.left-side-figure-figcaption > a:active {
+  color: var(--yellow);
+}
+
+/* RIGHT SIDE */
+
+.right-side {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: var(--picture-color);
+  background: linear-gradient(
+    122deg,
+    var(--picture-color),
+    var(--gradient-color-first)
+  );
+  border-radius: var(--radius);
+}
+
+.right-side-first-paragraph,
+.right-side-second-paragraph,
+.right-side-third-paragraph {
+  font-size: var(--font-medium);
+  color: var(--yellow);
+}
+
+.right-side-first-paragraph {
+  padding: var(--space-small) var(--space-small) 0 var(--space-small);
+}
+
+.right-side-second-paragraph {
+  padding: 0 var(--space-small) 0 var(--space-small);
+}
+
+.right-side-second-paragraph {
+  margin-bottom: var(--space-small);
+}
+
+.right-side-third-paragraph {
+  padding: 0 var(--space-small) 0 var(--space-small);
+  margin-bottom: var(--space-medium);
+}
+
+/* SIGN UP FORM */
+
+.right-side-form {
+  width: 100%;
+  padding: var(--space-small);
+  font-size: var(--font-small);
+  color: var(--yellow);
+  background-color: rgba(7, 118, 99, 0.1);
+  box-shadow: -15px 0px 10px 5px var(--gradient-color-first);
+}
+
+input {
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+label {
+  font-weight: var(--font-bold);
+  margin-bottom: 1rem;
+}
+
+fieldset {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: var(--radius);
+}
+
+fieldset > legend {
+  text-align: center;
+  font-weight: var(--font-bold);
+}
+
+.right-side-form-paragraph {
+  font-size: var(--font-medium);
+  margin-bottom: var(--space-medium);
+  text-align: center;
+}
+
+/* PERSONAL INFO */
+
+.right-side-form-personal-info {
+  margin-bottom: var(--space-small);
+}
+
+.first-and-last-name {
+  display: flex;
+  /* margin-right: auto; */
+  justify-content: space-around;
+  padding: var(--space-small);
+}
+
+.first-and-last-name-first-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.first-and-last-name-last-name {
+  display: flex;
+  flex-direction: column;
+}
+
+/* CONTACT DETAILS */
+
+.right-side-form-contact {
+  margin-bottom: var(--space-small);
+}
+
+.right-side-form-contact-details-and-phone-number {
+  display: flex;
+  justify-content: space-around;
+  padding: var(--space-small);
+}
+
+.right-side-form-contanct-details-email {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-side-form-contanct-details-phone-number {
+  display: flex;
+  flex-direction: column;
+}
+
+/* PASSWORD */
+
+.right-side-form-password-and-confirm-password {
+  display: flex;
+  justify-content: space-around;
+  padding: var(--space-small);
+}
+
+.right-side-form-password-and-confirm-password-password {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-side-form-password-and-confirm-password-confirm-password {
+  display: flex;
+  flex-direction: column;
+}
+
+/* BUTTON SECTION */
+
+.right-side-button-section {
+  display: flex;
+  flex-direction: column;
+  margin: var(--space-small) auto;
+}
+
+.right-side-button {
+  font-size: var(--font-medium);
+  margin-bottom: var(--space-small);
+  color: var(--gradient-color-first);
+  background-color: var(--yellow);
+  padding: var(--space-small);
+  border-radius: var(--radius);
+  border: 2px outset var(--gradient-color-first);
+  box-shadow: 0px 0px 10px 5px var(--yellow);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.right-side-button:hover {
+  background-color: var(--gradient-color-first);
+  color: var(--yellow);
+}
+
+.right-side-button:active {
+  /* border-style: none; */
+  box-shadow: 0px -4px 10px 0px var(--yellow);
+  transform: translateY(4px);
+  transition: 0.3s;
+}
+
+.right-side-button-paragraph {
+  font-size: var(--font-small);
+  color: var(--gray);
+}
+
+.right-side-button-paragraph > a:link {
+  color: white;
+  font-weight: var(--font-bold);
+  display: inline-block;
+}
+
+.right-side-button-paragraph > a:visited {
+  color: var(--dark-blue);
+}
+
+.right-side-button-paragraph > a:hover {
+  transform: scale(1.05);
+  color: var(--yellow);
+}
+
+.right-side-button-paragraph > a:active {
+  color: var(--yellow);
 }
