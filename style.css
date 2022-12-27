@@ -318,3 +318,35 @@ fieldset > legend {
 .right-side-button-paragraph > a:active {
   color: var(--yellow);
 }
+
+input[type="email"]:invalid {
+  background-color: var(--red);
+}
+
+input[type="email"]:valid {
+  background-color: var(--green);
+}
+
+input[type="password"]:invalid {
+  background-color: var(--red);
+}
+
+input[type="password"]:valid {
+  background-color: var(--green);
+}
+
+input[type="text"]:invalid {
+  background-color: var(--red);
+}
+
+input[type="text"]:valid {
+  background-color: var(--green);
+}
+
+#right-side-form-phone-number:invalid {
+  background-color: var(--red);
+}
+
+#right-side-form-phone-number:valid {
+  background-color: var(--green);
+}

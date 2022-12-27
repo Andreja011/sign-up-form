@@ -52,14 +52,16 @@
                 <div class="first-and-last-name-first-name">
                   <label for="right-side-form-first-name">FIRST NAME</label>
                   <input type="text" id="right-side-form-first-name"
-                    placeholder="Pera" name="first-name" required>
+                    placeholder="Pera" name="first-name" required
+                    pattern="^[\p{L}]${1,25}">
                 </div>
 
                 <!-- LAST NAME -->
                 <div class="first-and-last-name-last-name">
                   <label for="right-side-form-last-name">LAST NAME</label>
                   <input type="text" id="right-side-form-last-name"
-                    placeholder="Peric" name="last-name" required>
+                    placeholder="Peric" name="last-name" required
+                    pattern="^[\p{L}]${1,25}">
                 </div>
               </div>
             </fieldset>
@@ -73,13 +75,17 @@
                 <div class="right-side-form-contanct-details-email">
                   <label for="right-side-form-email">EMAIL</label>
                   <input type="email" id="right-side-form-email"
-                    placeholder="pera.peric@gmail.com" name="email" required>
+                    placeholder="pera.peric@gmail.com" name="email"
+                    pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+                    required>
                 </div>
                 <!-- PHONE NUMBER -->
                 <div class="right-side-form-contanct-details-phone-number">
-                  <label for="right-side-form-phone-number">PHONE NUMBER</label>
+                  <label for="right-side-form-phone-number">PHONE
+                    NUMBER</label>
                   <input type="text" id="right-side-form-phone-number"
-                    placeholder="+381631234567" name="phone-number">
+                    placeholder="+381631234567" name="phone-number"
+                    pattern="^(\+381)?(\s|-)?6(([0-6]|[8-9])\d{7}|(77|78)\d{6}){1}$">
                 </div>
               </div>
             </fieldset>
@@ -95,9 +101,10 @@
                   class="right-side-form-password-and-confirm-password-password">
                   <label for="right-side-form-password">PASSWORD</label>
                   <input type="password" id="right-side-form-password"
-                    name="password" required minlength="4" maxlength="16"
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,16}"
-                    placeholder="Your password">
+                    name="password" required minlength="6" maxlength="14"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,14}"
+                    placeholder="Your password"
+                    title="Password must contain at least one upercase letter one lowercase letter and one number and should have between 6 and 14 characters">
                 </div>
                 <!-- CONFIRM PASSWORD -->
                 <div
@@ -106,7 +113,8 @@
                     PASSWORD</label>
                   <input type="password" id="right-side-form-confirm-password"
                     name="confirm-password" required minlength="4"
-                    maxlength="16" placeholder="Repeat password">
+                    maxlength="16" placeholder="Repeat password"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,14}">
                 </div>
               </div>
             </fieldset>
