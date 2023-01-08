@@ -40,6 +40,7 @@ button {
   --yellow: #ffbe00;
   --picture-color: #041e24;
   --gradient-color-first: #00484a;
+  --border: #e5e7eb;
   --font-small: 1.5rem;
   --font-medium: 2.5rem;
   --font-big: 3.5rem;
@@ -174,7 +175,24 @@ button {
 
 input {
   border-radius: var(--radius);
+  border-color: var(--border);
   padding: 1rem;
+}
+
+input:focus {
+  background-color: var(--yellow);
+  border-color: var(--dark-blue);
+  box-shadow: 0px 0px 10px 5px var(--yellow);
+}
+
+input:valid {
+  border-color: var(--green);
+  box-shadow: 0px 0px 10px 5px var(--green);
+}
+
+input:invalid {
+  border-color: var(--red);
+  box-shadow: 0px 0px 10px 5px var(--red);
 }
 
 label {
@@ -262,6 +280,12 @@ fieldset > legend {
   flex-direction: column;
 }
 
+#right-side-form-password:invalid,
+#right-side-form-confirm-password:invalid {
+  color: var(--red);
+  border-color: var(--red);
+}
+
 /* BUTTON SECTION */
 
 .right-side-button-section {
@@ -317,36 +341,4 @@ fieldset > legend {
 
 .right-side-button-paragraph > a:active {
   color: var(--yellow);
-}
-
-input[type="email"]:invalid {
-  background-color: var(--red);
-}
-
-input[type="email"]:valid {
-  background-color: var(--green);
-}
-
-input[type="password"]:invalid {
-  background-color: var(--red);
-}
-
-input[type="password"]:valid {
-  background-color: var(--green);
-}
-
-input[type="text"]:invalid {
-  background-color: var(--red);
-}
-
-input[type="text"]:valid {
-  background-color: var(--green);
-}
-
-#right-side-form-phone-number:invalid {
-  background-color: var(--red);
-}
-
-#right-side-form-phone-number:valid {
-  background-color: var(--green);
 }
